@@ -1,0 +1,101 @@
+{"intents": [ 
+
+    {"tag": "greeting", 
+
+     "patterns": ["Hi", "Hey", "Is anyone there?", "Hello", "Hay"], 
+
+     "responses": [" Hello, I am Farmy. How can I help you? ", "Hi there. I am Farmy. How may I help you", "Welcome!! I am Farmy here. How can I help you?"] 
+
+    }, 
+
+    {"tag": "goodbye", 
+
+     "patterns": ["Bye", "See you later", "Goodbye"], 
+
+     "responses": ["See you later", "Have a nice day", "Bye! Come back again"] 
+
+    }, 
+
+    {"tag": "thanks", 
+
+     "patterns": ["Thanks", "Thank you", "That's helpful", "Thanks for the help"], 
+
+     "responses": ["Happy to help!", "Any time!", "My pleasure", "You're most welcome!"] 
+
+    }, 
+
+    {"tag": "about", 
+
+     "patterns": ["Who are you?", "What are you?", "Who you are?" ], 
+
+     "responses": ["I am Farmy, your bot assistant", "I'm Farmy, an Artificial Intelligent bot"] 
+
+    }, 
+
+    {"tag": "name", 
+
+    "patterns": ["what is your name", "what should I call you", "whats your name?"], 
+
+    "responses": ["You can call me Farmy.", "I'm Farmy!", "Just call me as Farmy"] 
+
+    }, 
+
+    {"tag": "help", 
+
+    "patterns": ["Could you help me?", "give me a hand please", "Can you help?", "What can you do for me?", "I need a support", "I need a help", "support me please"], 
+
+    "responses": ["Tell me how can assist you", "Tell me your problem to assist you", "Yes Sure, how can I support you"] 
+
+    }, 
+
+    {"tag": "createaccount", 
+
+    "patterns": ["I need to create a new account", "how to open a new account", "I want to create an account", "can you create an account for me", "how to open a new account"], 
+
+    "responses": ["You can just easily create a new account from our web site", "Just go to our web site and follow the guidelines to create a new account"] 
+
+    }, 
+
+{"tag": "features", 
+
+     "patterns": ["What can you do for me", "What are your features", "What all can you do"], 
+
+     "responses": ["I am here to answer your questions- 1. What crop to plant here?  2. What fertilizer to use?  3. Which disease does your crop have?  4. How to cure the disease?", " I will help you figure out -  1. What crop to plant here?  2. What fertilizer to use?  3. Which disease does your crop have?  4. How to cure the disease?",  " I help you find -  1. What crop to plant here?  2. What fertilizer to use?  3. Which disease does your crop have?  4. How to cure the disease?"] 
+
+}, 
+
+    {"tag": "creator", 
+
+    "patterns": ["Who created you", "Your creators", "Who made you"], 
+
+    "responses": [" I am created by the members of Group Phoenix.", " I am designed and managed by the members of Group Phoenix.", " I was bought to existence by the members of Group Phoenix."] 
+
+    }, 
+
+    {"tag": "vision", 
+
+    "patterns": ["Vision", "Your vision", "What is the vision of your project"], 
+
+    "responses": [" IMPROVING AGRICULTURE, IMPROVING LIVES ", " IMPROVING AGRICULTURE TO IMPROVING LIVES ", " IMPROVING AGRICULTURE, IMPROVING LIVES "] 
+
+    }, 
+
+    {"tag": "aim", 
+
+    "patterns": ["Aim", "Your aim", "What is the aim of your project"], 
+
+    "responses": [" The aim of this project is to create a user-friendly website where users can learn about the crops, they can grow in their fields based on the physical environmental factors and nutrients present in their soil. The next idea is to select the most suitable fertilizers for the soil. The project also helps the users to figure out the disease their plant may have.", " The aim of this project is to create a user-friendly website where users can decide which crops can be grown in their fields based on the physical environmental factors and nutrients present in their soil. The next idea is to select the most suitable fertilizers for the soil. The project also helps the users to figure out the disease their plant may have.", " The aim of this project is to create a user-friendly website to help users decide crops that can be grown in their fields based on the physical environmental factors and nutrients present in their soil. The next idea is to select the most suitable fertilizers for the soil. The project also helps the users to figure out the disease their plant may have"] 
+
+    }, 
+
+    {"tag": "complaint", 
+
+    "patterns": ["have a complaint", "I want to raise a complaint", "there is a complaint about a service"], 
+
+    "responses": ["Please provide us your complaint to assist you", "Please mention your complaint, we will reach you and sorry for any inconvenience caused"] 
+
+    } 
+
+] 
+
+} 

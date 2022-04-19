@@ -1,0 +1,243 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+<!-- banner -->
+    <div class="backdrop">
+        <div class="backdrop2">
+    <header xmlns="http://www.w3.org/1999/html">
+<!--        <div class="backdrop2">-->
+    <div class="header-content">
+    <h2>Cure your Crops</h2>
+    <div class="line"></div>
+    <h1>Easy Farming in Modern Times</h1>
+    <a href="{{ url_for('about_us') }}" class="ctn">Learn More</a>
+    </div>
+<!--        </div>-->
+    </header>
+        </div>
+    </div>
+
+
+<!-------Events----->
+<!--<section class="events">-->
+<!--        <div class="title">-->
+<!--            <h1>Upcoming Programs</h1>-->
+<!--            <div class="line"></div>-->
+<!--        </div>-->
+<!--        <div class="row">-->
+<!--            <div class="col">-->
+<!--                <img src="{{ url_for('static', filename='images/smartphonemicrophone.png') }}" alt="">-->
+<!--                <h4>Voice Assistant</h4>-->
+<!--                <p>Enable a voice assistant for our website. The task is to make user friendly interface that will enable the user to click the voice assistant button on the page, give custom voice commands and get the system's responses. </p>-->
+<!--&lt;!&ndash;                <a href="#" class="ctn">Learn More</a>&ndash;&gt;-->
+<!--            </div>-->
+<!--            <div class="col">-->
+<!--                <img src="{{ url_for('static', filename='images/contact-us-2993000__480.jpg') }}" alt="">-->
+<!--                <h4>Add Details</h4>-->
+<!--                <p>Add details about various contacts for buying fertilizers for crops and include plant disease treatment methods.</p>-->
+<!--&lt;!&ndash;                <a href="#" class="ctn">Learn More</a>&ndash;&gt;-->
+<!--            </div>-->
+<!--        </div>-->
+
+<!--    </section>-->
+
+<!--    <section class="events">-->
+<!--        <div class="title">-->
+<!--            <h1>Upcoming Programs</h1>-->
+<!--            <div class="line"></div>-->
+<!--        </div>-->
+<!--        <div class="row">-->
+<!--            <div class="col">-->
+<!--                <img src="{{ url_for('static', filename='images/1_ID6ME1Bb5DnrP7NROHEe0A.png') }}">-->
+<!--                <h4>Everest Camp</h4>-->
+<!--                <p> Enable a voice assistant for our website. The task is to make user friendly interface that will enable the user to click the voice assistant button on the page, give custom voice commands and get the system's responses.</p>-->
+<!--                <a href="#" class="ctn">Learn More</a>-->
+<!--            </div>-->
+<!--            <div class="col">-->
+<!--                <img src="{{ url_for('static', filename='images/contact-us-2993000__480.jpg') }}">-->
+<!--                <h4>Halking Holidays</h4>-->
+<!--                <p>Add details about various contacts for buying fertilizers for crops and include plant disease treatment methods.</p>-->
+<!--                <a href="#" class="ctn">Learn More</a>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--
+        <div class="row">
+            <div class="col">
+                <img src="./img/scott-goodwill-CtRE4_4L7b8-unsplash.jpg" alt="">
+                <h4>Halking Holidays</h4>
+                <p> cnkdjnc cnkmalnl canlk nnhbkafkuj cn canslakcc nancaois nuoce niaanoc nninfcan ccnono cnoikfhwow nonoaa i</p>
+                <a href="#" class="ctn">Learn More</a>
+            </div>
+        </div>
+-->
+<!--    </section>-->
+
+<!--    About us-->
+
+    <section class="about">
+        <div class="content">
+            <img src="{{ url_for('static', filename='images/farmer_PNG63.png') }}">
+            <div class="text">
+                <h1>About Us</h1>
+<!--                <h5>Developer and Designer</h5>-->
+                <p>Just upload an image, and shield your crop from potential diseases. Or upload your soil information, and we'll tell you what crops to grow, and what fertilizers to use. Whatever ails your crops and their well being, FarmEasy is the hub for all your solutions.</p>
+<!--                <button type="button_btn">Read More</button>-->
+                <button type="button_btn"class="secondbut"><a href="{{ url_for('about_us') }}">Read More</a></button>
+            </div>
+        </div>
+    </section>
+
+<!--    Forth desig-->
+    <section class="our">
+        <div class="heading">
+            <h2><span>Our</span> Services</h2>
+        </div>
+        <div class="container-box">
+            <div class="box">
+                <div class="box-img">
+                    <img src="{{ url_for('static', filename='images/daniel-fazio-oK9EKfqv8HE-unsplash.jpg') }}">
+                </div>
+                <div class="box-content">
+                    <h3>Crop</h3>
+                    <p>As they say, you reap what you sow. And as we say, if you wish to reap a healthy yield, it's time you sow the right seeds, based on what your soil needs. Enter information on your soil, and we'll recommend what to grow.</p>
+                    <a href="{{ url_for('crop_recommend') }}">Predict</a>
+                </div>
+            </div>
+            <div class="box">
+                <div class="box-img">
+                    <img src="{{ url_for('static', filename='images/severin-candrian-0xoF2R50GOA-unsplash.jpg') }}">
+                </div>
+                <div class="box-content">
+                    <h3>Fertilizer</h3>
+                    <p>The soil is the core of your crops, as it contains within it. So it's only reasonable that you take care of your soil, and choose the right fertiliser for it. Enter information on your soil, and we'll recommend the best fertilisers to use.</p>
+                    <a href="{{ url_for('fertilizer_recommendation') }}">Predict</a>
+                </div>
+            </div>
+            <div class="box">
+                <div class="box-img">
+                    <img src="{{ url_for('static', filename='images/potato-blight.jpg') }}">
+                </div>
+                <div class="box-content">
+                    <h3>Disease</h3>
+                    <p>It is possible that, despite your best efforts, your crops fall prey to disease. Perhaps you have no idea what afflicts your crop. Don't worry, just upload a picture of the surface, and we'll let you know what the disease is.</p>
+                    <a href="{{ url_for('disease_prediction') }}">Predict</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+<!--Explore-->
+    <section class="explore">
+        <div class="backdrop2">
+        <div class="explore-content">
+            <h1>Discover a new Approach towards Farming</h1>
+            <div class="line"></div>
+            <p>We use state-of-the-art machine learning and deep learning technologies to help you guide through the entire farming process. Make informed decisions to understand the demographics of your area, understand the factors that affect your crop and keep them healthy for a super awesome successful yield.</p>
+            <a href="{{ url_for('about_us') }}" class="ctn">Learn More</a>
+        </div>
+        </div>
+    </section>
+
+
+
+<!--    Another design of Our team -->
+
+    <section class="team">
+        <div class="content-box">
+            <div class="container">
+                <h1>Our <em>Team</em></h1>
+                <div class="row services">
+                <div class="col-md-3 text-center">
+                    <div class="icon">
+                        <img src="{{ url_for('static', filename='images/004-man-1.png') }}">
+                    </div>
+                    <h3>Prashant <span>Chauhan</span></h3>
+                    <h5>Web Developer and Content Writer(Designer)</h5>
+                    <p>At Rural Steer, I played a role as web Developer(Front-end and Back-end). Deployed the ML and Dl model features to the website, to make it user-friendly and Responsive.</p>
+                </div>
+                <div class="col-md-3 text-center">
+                    <div class="icon">
+                        <img src="{{ url_for('static', filename='images/005-woman.png') }}">
+                    </div>
+                    <h3>Ruhi <span>Ranjan</span></h3>
+                    <h5>Researcher, Leader</h5>
+                    <p>Coordinate the execution of the project between different branches of the group. To investigate problems and solutions for the project and to gather data for the report.</p>
+                </div>
+                <div class="col-md-3 text-center">
+                    <div class="icon">
+                        <img src="{{ url_for('static', filename='images/005-woman.png') }}">
+                    </div>
+                    <h3>Pragati <span>Bajpai</span></h3>
+                    <h5>Researcher, Co-leader.</h5>
+                    <p>Organize the process, work flow, and data. I worked on the issue and its resolution, particularly in fertiliser.</p>
+                </div>
+                <div class="col-md-3 text-center">
+                    <div class="icon">
+                        <img src="{{ url_for('static', filename='images/005-woman.png') }}">
+                    </div>
+                    <h3> <span>Namrata</span></h3>
+                    <h5>AI Model Developer.</h5>
+                    <p>Responsible for the AI model development of Fertilizer Recommendation and Disease Detection in the project along with adding chat bot for an enhanced user friendly website.</p>
+                </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+        <section class="team">
+        <div class="content-box">
+            <div class="container">
+                <div class="row services">
+                <div class="col-md-3 text-center">
+                    <div class="icon">
+                        <img src="{{ url_for('static', filename='images/005-woman.png') }}">
+                    </div>
+                    <h3>Meghna <span>Chandwani</span></h3>
+                    <h5>AI Model Developer.</h5>
+                    <p>Responsible for the AI model development of Crop Recommendation and Disease Detection in the project along with adding real time image capture feature for an enhanced user friendly website.</p>
+                </div>
+                <div class="col-md-3 text-center">
+                    <div class="icon">
+                        <img src="{{ url_for('static', filename='images/004-man-1.png') }}">
+                    </div>
+                    <h3>Aksh Pani <span>Pandey</span></h3>
+                    <h5>Taskmaster, Researcher.</h5>
+                    <p>I worked on the complications and keys, particularly in disease predictions.</p>
+                </div>
+                <div class="col-md-3 text-center">
+                    <div class="icon">
+                        <img src="{{ url_for('static', filename='images/005-woman.png') }}">
+                    </div>
+                    <h3>Saman Arif <span>Khan</span></h3>
+                    <h5>Researcher, Analyst</h5>
+                    <p>My roles as a team member included Research work, data collection, analysing output and work flow, generation and execution of ideas accordingly with other branch members of my team.</p>
+                </div>
+                <div class="col-md-3 text-center">
+                    <div class="icon">
+                        <img src="{{ url_for('static', filename='images/004-man-1.png') }}">
+                    </div>
+                    <h3>Aditya <span>Subramaniam</span></h3>
+                    <h5>Web Developer</h5>
+                    <p>Coordinated with teammates to work on the website's front end. Worked on UX, added decorative elements and wrote content for the page based on the team's collective vision.</p>
+                </div>
+                </div>
+            </div>
+        </div>
+		</section>
+
+<!-- Creating custom grid and hover effect
+<section>
+<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+    <div class="hovereffect">
+        <img class="img-responsive" src="images/s2.jpg" alt="">
+        <div class="overlay">
+           <h2>Hover effect 1</h2>
+           <a class="info" href="#">link here</a>
+        </div>
+    </div>
+</div> -->
+
+</html>
+
+{% endblock %}

@@ -1,0 +1,129 @@
+{% extends 'layout.html' %} {% block body %}
+
+<!--rgb(206, 206, 228) below old color-->
+<style>
+  html body {
+    background: -webkit-linear-gradient(left, #2acbd1, #91d12a);
+  }
+</style>
+<br /><br />
+  <h2 style="text-align: center; margin: 0px; padding-top: 50px; color: black">
+    <b>Find out which disease has been caught by your plant</b>
+  </h2>
+  <br />
+  <br>
+
+<div style="
+    width: 800px;
+    height: 50rem;
+    margin: 0px auto;
+    color: black;
+    border-radius: 25px;
+    padding: 10px 10px;
+    font-weight: bold;
+    overflow: auto;
+  ">
+
+  
+
+
+  <form class="form-signin" method=post enctype=multipart/form-data">
+
+    <h2 class="h4 mb-3 font-weight-normal"><b>Please Upload The Image</b></h2>
+
+
+    <input type="file" name="file" class="form-control-file" id="inputfile" onchange="preview_image(event)" style="font-weight: bold;">
+    <br>
+    <br>
+
+    <!--        stream video via webcam-->
+        <div class="video-wrap">
+            <video id="video" playsinline autoplay></video>
+        </div>
+<!--        trigger canvas web api-->
+        <div class="controller">
+            <button id="snap">Capture</button>
+        </div>
+
+<!--        webcam video snapshot-->
+        <canvas id="canvas" width="400" height="250"></canvas>
+
+        <script>
+            'use strict';
+
+            const video = document.getElementById('video');
+            const canvas = document.getElementById('canvas');
+            const snap = document.getElementById('snap');
+            const errorMsgElement = document.getElementById('span#ErrorMsg');
+
+            const constraints = {
+                audio: true,
+                video:{
+                width:400, height:250
+            }
+            };
+
+            async function init(){
+                try{
+                    const stream = await navigator.mediaDevices.getUserMedia(constraints);
+                    handleSuccess(stream);
+
+                }
+                catch(e){
+                    errorMsgElement.innerHTML = `navigator.getUserMedia.Error:${e.toString()}`;
+
+                }
+            }
+
+            // Success
+
+            function handleSuccess(stream){
+                window.stream = stream;
+                video.srcObject = stream;
+            }
+
+            // load init
+
+            init();
+            //draw image
+            var context = canvas.getContext('2d');
+            snap.addEventListener("click",function(){
+                context.drawImage(video, 0, 0, 400, 250);
+            });
+        </script>
+
+
+
+    <img id="output-image" class="rounded mx-auto d-block" />
+    <button class="btn btn-lg btn-primary btn-block" type="submit" style="font-weight: bold; width: 350px; text-align: center;">Predict</button>
+
+
+  </form>
+
+<!--    <ul class="fertilizer-distributor" style="padding-top: 50px; padding-bottom: 50px;">-->
+<!--        <li>-->
+<!--                <a href="{{ url_for('Fertilizer_distributor') }}">Fertilizer Distributors</a>-->
+<!--        </li>-->
+<!--    </ul>-->
+
+    <br /><br />
+  <h5 style="text-align: center; margin: 0px; padding-top: 50px; padding-bottom: 50px; color: black">
+    Here you can find the local agency in your District from where you can buy the best Fertilizer for your crop <a href="{{ url_for('Fertilizer_distributor') }}">Fertilizer Distributors</a>
+  </h5>
+  <br />
+  <br>
+</div>
+
+<script type="text/javascript">
+  function preview_image(event) {
+    var reader = new FileReader();
+    reader.onload = function () {
+      var output = document.getElementById('output-image')
+      output.src = reader.result;
+    }
+    reader.readAsDataURL(event.target.files[0]);
+  }
+</script>
+
+</div>
+{% endblock %}
